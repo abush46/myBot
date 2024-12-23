@@ -8,12 +8,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "next lint",   
+     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-       "node-telegram-bot-api": "^0.66.0"
+       "node-telegram-bot-api": "^0.66.0",
        "react": "^18",
       "react-dom": "^18",
      "next": "14.2.10"
