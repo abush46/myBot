@@ -19,9 +19,9 @@ bot.on("message", (msg) => {
 const { Telegraf } = require("telegraf");
 
 const bot = new Telegraf(token);
-bot.telegram.setWebhook("https://my-bot-beryl-iota.vercel.app/index.js");
+//bot.telegram.setWebhook("https://my-bot-beryl-iota.vercel.app/index.js");
 bot.start((ctx) => ctx.reply("Welcome"));
 bot.help((ctx) => ctx.reply("Send me a sticker"));
 bot.on("sticker", (ctx) => ctx.reply("👍"));
 bot.hears("hi", (ctx) => ctx.reply("Hey there"));
-//bot.launch();
+bot.launch();
