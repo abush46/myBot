@@ -37,12 +37,12 @@ module.exports = (req, res) => {
     try {
       const update = req.body;
       handleUpdate(update);
-      res.sendStatus(200); // Respond with a 200 OK status
+      res.status(200).end(); // Respond with a 200 OK status
     } catch (error) {
       console.error("Error handling update:", error);
-      res.sendStatus(500); // Respond with a 500 Internal Server Error
+      res.status(500).end(); // Respond with a 500 Internal Server Error
     }
   } else {
-    res.sendStatus(404); // Respond with a 404 Not Found for other methods
+    res.status(404).end(); // Respond with a 404 Not Found for other methods
   }
 };
