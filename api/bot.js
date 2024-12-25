@@ -20,14 +20,13 @@ const handleUpdate = (update) => {
       chatId,
       `Hello ${firstName}, welcome to the Telegram Webhook Bot!`
     );
-  }
-
-  // Handle /mydata command
-  if (update.message.text === "/mydata") {
+  } else if (update.message.text === "/mydata") {
     bot.sendMessage(
       chatId,
       `User Data:\nID: ${userId}\nName: ${firstName} ${lastName}\nUsername: ${username}`
     );
+  } else if (update.message.text === "") {
+    bot.sendMessage(chatId, `HI! ${firstName} ${lastName} How can I help you?`);
   }
 };
 
