@@ -1,4 +1,3 @@
-
 const TelegramBot = require('node-telegram-bot-api');
 
 // Replace with your bot token
