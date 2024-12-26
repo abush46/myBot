@@ -36,6 +36,7 @@ module.exports = (req, res) => {
     try {
       const update = req.body;
       handleUpdate(update);
+console.log("sending message");
       res.status(200).end(); // Respond with a 200 OK status
     } catch (error) {
       console.error("Error handling update:", error);
