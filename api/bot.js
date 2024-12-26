@@ -20,14 +20,17 @@ const handleUpdate = (update) => {
       chatId,
       `Hello ${firstName}, welcome to the Telegram Webhook Bot!`
     );
-  } 
+  }
 
- if (update.message.text === "/mydata") {
+  if (update.message.text === "/mydata") {
     bot.sendMessage(
       chatId,
       `User Data:\nID: ${userId}\nName: ${firstName} ${lastName}\nUsername: ${username}`
     );
-  } 
+  }
+  if (update.message.text === "hi") {
+    bot.sendMessage(chatId, `HII`);
+  }
 };
 
 // Vercel will call this function when there is an update
@@ -36,7 +39,7 @@ module.exports = (req, res) => {
     try {
       const update = req.body;
       handleUpdate(update);
-console.log("sending message");
+      console.log("sending message");
       res.status(200).end(); // Respond with a 200 OK status
     } catch (error) {
       console.error("Error handling update:", error);
