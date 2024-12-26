@@ -20,14 +20,14 @@ const handleUpdate = (update) => {
       chatId,
       `Hello ${firstName}, welcome to the Telegram Webhook Bot!`
     );
-  } else if (update.message.text === "/mydata") {
+  } 
+
+ if (update.message.text === "/mydata") {
     bot.sendMessage(
       chatId,
       `User Data:\nID: ${userId}\nName: ${firstName} ${lastName}\nUsername: ${username}`
     );
-  } else if (update.message.text === "") {
-    bot.sendMessage(chatId, `HI! ${firstName} ${lastName} How can I help you?`);
-  }
+  } 
 };
 
 // Vercel will call this function when there is an update
